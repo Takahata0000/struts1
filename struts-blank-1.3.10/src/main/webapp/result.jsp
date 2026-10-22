@@ -3,10 +3,11 @@
 <html>
 <body>
 <a href="http://localhost:8080/struts-blank-1.3.10/Welcome.do"/><img src="../../images/return.gif" height="24" width="24" alt="Return to examples page" class="icon" /></a>
-
-  <p>こんにちは、<bean:write name="helloForm" property="name"/> さん！</p>
-  <p>あなたは、<bean:write name="helloForm" property="kumi"/> 組です。</p>
-  <p>今日の運勢を占います。</p>
+  <p>商品を登録しました。</p>
+  <p>商品名：<bean:write name="helloForm" property="name"/></p>
+  <p>価格：<bean:write name="helloForm" property="price"/></p>
+  <p>種類：<bean:write name="helloForm" property="category"/></p>
+  
 <%
 out.println(new java.util.Date());
 int i = (int)(Math.random()*10);

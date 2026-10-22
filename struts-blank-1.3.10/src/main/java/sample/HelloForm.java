@@ -9,13 +9,17 @@ import org.apache.struts.action.ActionMessage;
 
 public class HelloForm extends ActionForm{
 	private String name;
-	private String kumi;
+	private String price;
+	private String category;
 	
 	public String getName() {return name;}
 	public void setName(String name) {this.name = name;};
 	
-	public String getKumi() {return kumi;}
-	public void setKumi(String kumi) {this.kumi = kumi;};
+	public String getPrice() {return price;}
+	public void setPrice(String price) {this.price = price;};
+	
+	public String getCategory() {return category;}
+	public void setCategory(String category) {this.category = category;};
 	
 	// バリデーション処理
     public ActionErrors validate(
@@ -30,8 +34,8 @@ public class HelloForm extends ActionForm{
             }
 
             // Secret Phrase must be entered
-            if ((kumi == null) || (kumi.length() < 1)) {
-                errors.add("kumi", new ActionMessage("errors.kumi.required"));
+            if ((price == null) || (price.length() < 1)) {
+                errors.add("price", new ActionMessage("errors.price.required"));
             }
 
             return (errors);

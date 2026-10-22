@@ -41,10 +41,18 @@
   <html:errors/>
 </div>  
   <html:form  action="/hello">
-    名前: <html:text property="name"/>
-    <br/>
-    組: <html:text property="kumi"/>
-    <br>
+  	<p>* 商品名:<br/><html:text property="name" size="40" maxlength="50"/></p>
+	<p>* 価格:<br/><html:text property="price" size="40" maxlength="50"/></p>
+	
+	<p>種類:<br/> 
+	  <html:select property="category">
+    	<html:option value="tea">茶系飲料</html:option>
+	    <html:option value="soda">炭酸飲料</html:option>
+    	<html:option value="fruit">果実飲料</html:option>
+    	<html:option value="other">その他</html:option>
+	  </html:select>
+    </p>
+	
     <html:submit value="送信"/>
   </html:form>
   
